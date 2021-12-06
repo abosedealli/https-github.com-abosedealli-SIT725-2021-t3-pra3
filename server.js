@@ -61,12 +61,9 @@ app.get("/test", function (request, response) {
     img:null,
   },
 
-]
-
-
-=======
-
->>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
+  app.get("/projects", function(request, response) {
+    response.json(projects);
+});
 //socket test
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -78,16 +75,7 @@ io.on('connection', (socket) => {
   }, 1000);
 
 });
-
-<<<<<<< HEAD
-app.get("/projects", function(request, response) 
-{
-  response.json(projects);
-});
-
-=======
->>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
-
+ 
 http.listen(port,()=>{
   console.log("Listening on port ", port);
 });
