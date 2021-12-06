@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 Hello by Abosede Alli:
 
 This is my basic page for project work.. 
 
+=======
+Hello by Alessio:
+
+This is my boilerplate for creating simple new applications. 
+This boilerplate is very basic and should be used as a training ground
+>>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
 
 It comprises of 
 Jquery for advanced manipulations

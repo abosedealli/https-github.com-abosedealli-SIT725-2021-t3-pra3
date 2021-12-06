@@ -6,6 +6,11 @@ let http = require('http').createServer(app);
 let io = require('socket.io')(http);
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
 
 var port = process.env.PORT || 8080;
 
@@ -16,6 +21,7 @@ app.get("/test", function (request, response) {
   response.end("Hello " + user_name + "!");
 });
 
+<<<<<<< HEAD
  let id=1;
   const projects=[
     {
@@ -58,6 +64,9 @@ app.get("/test", function (request, response) {
 ]
 
 
+=======
+
+>>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
 //socket test
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -70,15 +79,22 @@ io.on('connection', (socket) => {
 
 });
 
+<<<<<<< HEAD
 app.get("/projects", function(request, response) 
 {
   response.json(projects);
 });
 
+=======
+>>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
 
 http.listen(port,()=>{
   console.log("Listening on port ", port);
 });
 
 //this is only needed for Cloud foundry 
+<<<<<<< HEAD
 //require("cf-deployment-tracker-client").track();
+=======
+require("cf-deployment-tracker-client").track();
+>>>>>>> 4ebffd3203e1e037e99405d03f181e79e3556ff6
