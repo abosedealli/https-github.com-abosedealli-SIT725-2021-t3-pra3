@@ -2,12 +2,8 @@ env.js
 const testButtonFunction=()=>{
   alert('Thank you for clicking')
 }
-
 // connect to the socket
-
 let socket = io();
-
-
 socket.on('number', (msg) => {
     console.log('Random number: ' + msg);
 })
@@ -20,7 +16,7 @@ $(document).ready(function(){
   $('#testButton').click(testButtonFunction)
 
   //test get call
-  $.get('/test?user_name="Fantastic User"',(result)=>{
+  $.get('/projects',(result)=>{
     console.log(result)
   })
 

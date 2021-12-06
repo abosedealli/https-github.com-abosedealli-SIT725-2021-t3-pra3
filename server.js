@@ -17,7 +17,7 @@ app.get("/test", function (request, response) {
 });
 
  let id=1;
-  const project=[
+  const projects=[
     {
       id:id,
       title:"project "+id,
@@ -70,8 +70,9 @@ io.on('connection', (socket) => {
 
 });
 
-app.get("/project", function(request, response) {
-  response.json(project);
+app.get("/projects", function(request, response) 
+{
+  response.json(projects);
 });
 
 

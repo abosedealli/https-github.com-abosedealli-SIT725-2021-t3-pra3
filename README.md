@@ -1,7 +1,7 @@
 Hello by Abosede Alli:
 
-This is my boilerplate for creating simple new applications. 
-This boilerplate is very basic and should be used as a training ground
+This is my basic page for project work.. 
+
 
 It comprises of 
 Jquery for advanced manipulations
