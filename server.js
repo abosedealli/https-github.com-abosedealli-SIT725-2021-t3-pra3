@@ -16,6 +16,47 @@ app.get("/test", function (request, response) {
   response.end("Hello " + user_name + "!");
 });
 
+ let id=1;
+  const project=[
+    {
+      id:id,
+      title:"project "+id,
+      info: "This are the projection no" 
+      +id +"start projection here",
+      img:null,
+    },
+    {
+    id:++id,
+    title:"project  "+id,
+    info: "This are the projection no" 
+    +id +"start projection here",
+    img:null,
+    },
+    {
+    id:++id,
+    title:"project "+id,
+    info: "This are the projection no" 
+    +id +"start projection here",
+    img:null,
+    },
+    {
+    
+      id:++id,
+      title:"project  "+id,
+      info: "This are the projection no" 
+      +id +"start projection here",
+      img:null,
+    },
+  {
+    id:++id,
+    title:"project  "+id,
+    info: "This are the projection no" 
+    +id +"start projection here",
+    img:null,
+  },
+
+]
+
 
 //socket test
 io.on('connection', (socket) => {
@@ -27,6 +68,10 @@ io.on('connection', (socket) => {
     socket.emit('number', parseInt(Math.random()*10));
   }, 1000);
 
+});
+
+app.get("/project", function(request, response) {
+  response.json(project);
 });
 
 

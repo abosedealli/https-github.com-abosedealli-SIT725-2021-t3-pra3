@@ -1,4 +1,4 @@
-Hello by Alessio:
+Hello by Abosede Alli:
 
 This is my boilerplate for creating simple new applications. 
 This boilerplate is very basic and should be used as a training ground
