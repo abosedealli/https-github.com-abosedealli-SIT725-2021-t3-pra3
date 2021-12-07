@@ -16,6 +16,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM-Bluemix/bluemix-hello-node.git"
+    "url": "https://github.com/abosedealli/sit-t3-pra3.git"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
