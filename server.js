@@ -14,52 +14,46 @@ app.get("/test", function(request, response) {
     response.end("Hello " + user_name + "!");
 });
 
+let id = 1;
 
-
- let id=1;
-  const projects=[
-    {
-      id:id,
-      title:"project "+id,
-      info: "This are the projection no" 
-      +id +"start projection here",
-      img:null,
+const projects = [{
+        id: id,
+        title: "project " + id,
+        info: `This is the project number ${id} we are creating here`,
+        img: null,
     },
     {
-    id:++id,
-    title:"project  "+id,
-    info: "This are the projection no" 
-    +id +"start projection here",
-    img:null,
+        id: ++id,
+        title: "project " + id,
+        info: `This is the project number ${id} we are creating here`,
+        img: null,
     },
     {
-    id:++id,
-    title:"project "+id,
-    info: "This are the projection no" 
-    +id +"start projection here",
-    img:null,
+        id: ++id,
+        title: "project " + id,
+        info: `This is the project number ${id} we are creating here`,
+        img: null,
     },
     {
-    
-      id:++id,
-      title:"project  "+id,
-      info: "This are the projection no" 
-      +id +"start projection here",
-      img:null,
+        id: ++id,
+        title: "project " + id,
+        info: `This is the project number ${id} we are creating here`,
+        img: null,
     },
-  {
-    id:++id,
-    title:"project  "+id,
-    info: "This are the projection no" 
-    +id +"start projection here",
-    img:null,
-  },
+    {
+        id: ++id,
+        title: "project " + id,
+        info: `This is the project number ${id} we are creating here`,
+        img: null,
+    },
 ]
 
 
-  app.get("/projects", function(request, response) {
+
+app.get("/projects", function(request, response) {
     response.json(projects);
 });
+
 
 
 //socket test
@@ -73,12 +67,8 @@ io.on('connection', (socket) => {
     }, 1000);
 
 });
- 
-http.listen(port,()=>{
-  console.log("Listening on port ", port);
+
+
+http.listen(port, () => {
+    console.log("Listening on port ", port);
 });
-
-//this is only needed for Cloud foundry 
-//require("cf-deployment-tracker-client").track();
-//require("cf-deployment-tracker-client").track();
-
