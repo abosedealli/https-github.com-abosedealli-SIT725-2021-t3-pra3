@@ -53,11 +53,13 @@ app.get("/test", function(request, response) {
     info: "This are the projection no" 
     +id +"start projection here",
     img:null,
-  }]
+  },
+]
+
 
   app.get("/projects", function(request, response) {
     response.json(projects);
-})
+});
 
 
 //socket test
@@ -77,6 +79,6 @@ http.listen(port,()=>{
 });
 
 //this is only needed for Cloud foundry 
-require("cf-deployment-tracker-client").track();
-require("cf-deployment-tracker-client").track();
+//require("cf-deployment-tracker-client").track();
+//require("cf-deployment-tracker-client").track();
 
