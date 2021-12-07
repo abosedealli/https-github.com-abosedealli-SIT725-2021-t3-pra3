@@ -1,4 +1,4 @@
-let express = require("express");
+et express = require("express");
 let app = express();
 
 //var app = require('express')();
@@ -16,13 +16,20 @@ app.get("/test", function(request, response) {
 
 let id = 1;
 
-const projects = [{
-        id: id,
+const projects = [];
+       for (let id=1; id<11; id++) 
+       {
+           projects.push({projectID: id,
+            title: 'cyberproject '+ id,
+            info:`This is the project number ${id} we are creating here`,
+            img: null,
+           });
+       }
         title: "project " + id,
         info: `This is the project number ${id} we are creating here`,
-        img: null,
-    },
-    {
+       img: null,
+    
+  {
         id: ++id,
         title: "project " + id,
         info: `This is the project number ${id} we are creating here`,
@@ -41,13 +48,12 @@ const projects = [{
         img: null,
     },
     {
-        id: ++id,
+      id: ++id,
         title: "project " + id,
         info: `This is the project number ${id} we are creating here`,
         img: null,
-    },
+  },
 ]
-
 
 
 app.get("/projects", function(request, response) {
@@ -72,3 +78,6 @@ io.on('connection', (socket) => {
 http.listen(port, () => {
     console.log("Listening on port ", port);
 });
+
+//this is only needed for Cloud foundry 
+ require("cf-deployment-tracker-client").track();
